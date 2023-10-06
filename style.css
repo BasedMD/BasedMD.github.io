@@ -11,10 +11,13 @@ h1 {
 /* Add more styles as needed */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates n columns of equal width */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(6, 1fr); /* 6 rows */
     gap: 10px; /* Adjust the gap between grid items */
+    width: 300px; /* Set a fixed width for the grid container */
 }
 
-.grid-container > div {
-    /* Add styling for individual grid items here */
+.grid-item {
+    border: 1px solid #000; /* Add borders to visually separate the grid items */
+    padding: 10px; /* Add padding for spacing inside each grid item */
 }
