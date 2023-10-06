@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Based MD</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
 </head>
+<style>
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; /* Auto rows for dynamic content */
+    gap: 10px;
+    width: 100%; /* Full width on mobile */
+}
+
+.grid-item {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* For screens wider than 768px (3 columns) */
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        max-width: 600px; /* Set a maximum width for the grid container */
+        margin: 0 auto; /* Center the grid container horizontally */
+    }
+}
+</style>
 <body>
     <h1> With ears to hear and eyes to see </h1>
     <p> Sample text </p>
